@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Kairasi Jewellery</title>
+
+<style>
+/* ---------------- GLOBAL STYLES ---------------- */
+body{
+    margin:0;
+    font-family: 'Segoe UI';
+    background:#fff8e7;
+    color:#4a3b2a;
+}
+
+header{
+    background:#d4af37;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    width:120px;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+nav a:hover{ text-decoration:underline; }
+
+/* ---------------- HERO SECTION ---------------- */
+.hero{
+    padding:50px;
+    text-align:center;
+    background:#d4af37;
+    color:white;
+}
+.hero h1{
+    font-size:40px;
+    margin:0;
+}
+.hero p{
+    font-size:20px;
+    margin-top:10px;
+}
+
+/* ---------------- AUTO SLIDE CAROUSEL ---------------- */
+.carousel-container{
+    overflow:hidden;
+    width:100%;
+    margin-top:40px;
+}
+.carousel{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation: scroll 25s linear infinite;
+}
+.carousel img{
+    width:300px;
+    height:230px;
+    border-radius:12px;
+    object-fit:cover;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+@keyframes scroll {
+  0% { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
+/* ---------------- 3D CARDS ---------------- */
+.card-section{
+    margin:50px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.card3d{
+    width:250px;
+    height:160px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#4a3b2a;
+    font-size:22px;
+    font-weight:bold;
+    transform:perspective(600px) rotateY(0deg);
+    transition:0.5s;
+}
+.card3d:hover{
+    transform:perspective(600px) rotateY(18deg) scale(1.05);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer{
+    text-align:center;
+    background:#fff2cc;
+    padding:20px;
+    margin-top:40px;
+    font-size:18px;
+}
+</style>
+</head>
+
+
+
+<body>
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+    <img src="logo.svg" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gold.html">Gold</a>
+        <a href="silver.html">Silver</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+
+<!-- ---------------- HERO SECTION ---------------- -->
+<section class="hero">
+    <h1>Welcome to Sri Kairasi Jewellery</h1>
+    <p>Finest Gold & Silver Collections in Vikiravandi, Villupuram</p>
+</section>
+
+
+
+<!-- ---------------- AUTO SLIDE JEWELLERY CAROUSEL ---------------- -->
+<h2 style="text-align:center; margin-top:40px;">✨ Featured Collections ✨</h2>
+
+<div class="carousel-container">
+    <div class="carousel">
+        <img src="images/gold1.jpg">
+        <img src="images/gold2.jpg">
+        <img src="images/silver1.jpg">
+        <img src="images/bangle.jpg">
+        <img src="images/ring.jpg">
+
+        <!-- duplicated for smooth loop -->
+        <img src="images/gold1.jpg">
+        <img src="images/gold2.jpg">
+        <img src="images/silver1.jpg">
+        <img src="images/bangle.jpg">
+        <img src="images/ring.jpg">
+    </div>
+</div>
+
+
+
+<!-- ---------------- 3D HOVER CARDS ---------------- -->
+<div class="card-section">
+    <a class="card3d" href="gold.html">Gold Collections</a>
+    <a class="card3d" href="silver.html">Silver Collections</a>
+</div>
+
+
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer id="contact">
+    📞 7010660422 | 📧 gowthamr2911@gmail.com <br>
+    📍 Vikiravandi, Villupuram
+</footer>
+
+
+
+</body>
+</html>
